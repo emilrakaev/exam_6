@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Guests Book{% endblock %}
+
+{% block content %}
+    <h1>Guests:</h1>
+    {% for guest in guests %}
+        {% if guest.status == 'active' %}
+            <h3>{{ guest.name }} ({{ guest.email }})</h3>
+            <p>{{ guest.text }} </p>
+            <p>{{ guest.status }}</p>
+            {#            <p><a href="{% url 'guest_update' guest.pk %}">Update</a></p>#}
+            {#            <p><a href="{% url 'guest_delete' guest.pk %}">Delete</a></p>#}
+        {% endif %}
+    {% endfor %}
+{% endblock %}

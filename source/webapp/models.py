@@ -1,6 +1,6 @@
 from django.db import models
 
-DEFAULT_STATUS = 'other'
+DEFAULT_STATUS = 'active'
 STATUS_CHOICES = [
     (DEFAULT_STATUS, 'Активно'),
     ('blocked', 'Заблокировано'),
@@ -13,7 +13,7 @@ class Guest(models.Model):
     text = models.TextField(max_length=2000, verbose_name='Текст записи')
     create_at = models.DateTimeField(auto_now_add=True, verbose_name='Время создания')
     update_at = models.DateTimeField(auto_now=True, verbose_name='Время изменения')
-    status = models.TextField(max_length=50, choices = STATUS_CHOICES,
+    status = models.TextField(max_length=50, choices=STATUS_CHOICES,
                               default=DEFAULT_STATUS, verbose_name='Статус')
 
     def __str__(self):
@@ -22,3 +22,4 @@ class Guest(models.Model):
     class Meta:
         verbose_name = 'Гость'
         verbose_name_plural = 'Гости'
+        ordering = ('-create_at',)
