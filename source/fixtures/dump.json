@@ -1,0 +1,104 @@
+[
+{
+  "model": "webapp.guest",
+  "pk": 1,
+  "fields": {
+    "name": "Vasya Pupkin",
+    "email": "vasya@gmail.com",
+    "text": "TestTestTestTestTestTestTestTestTestTestimTestimTestim",
+    "create_at": "2020-08-01T06:04:02.562Z",
+    "update_at": "2020-08-01T06:33:07.624Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 2,
+  "fields": {
+    "name": "Admin Adminych",
+    "email": "admin@mail.ru",
+    "text": "TestTestTestTestTestTestTestTestTestTestTestTest",
+    "create_at": "2020-08-01T06:04:57.044Z",
+    "update_at": "2020-08-01T06:04:57.044Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 3,
+  "fields": {
+    "name": "Emil Rakaev",
+    "email": "emilrakaev@gmail.com",
+    "text": "TestTestTestTestTestTestTestTestTestTestTestTestTest",
+    "create_at": "2020-08-01T06:05:50.579Z",
+    "update_at": "2020-08-01T06:05:50.579Z",
+    "status": "blocked"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 5,
+  "fields": {
+    "name": "Donal Trump",
+    "email": "donald@gmail.com",
+    "text": "Good morning!!!",
+    "create_at": "2020-08-01T07:17:07.770Z",
+    "update_at": "2020-08-01T07:33:08.944Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 6,
+  "fields": {
+    "name": "Barak Obama",
+    "email": "barak@gmail.com",
+    "text": "hello!!!",
+    "create_at": "2020-08-01T07:19:26.861Z",
+    "update_at": "2020-08-01T07:19:26.861Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 11,
+  "fields": {
+    "name": "Angelina Jolie",
+    "email": "angelina@gmail.com",
+    "text": "TestTestTestTestTest",
+    "create_at": "2020-08-01T12:18:24.515Z",
+    "update_at": "2020-08-01T12:18:24.515Z",
+    "status": "active"
+  }
+},
+{
+  "model": "webapp.guest",
+  "pk": 12,
+  "fields": {
+    "name": "Brad Pitt",
+    "email": "brad@gmail.com",
+    "text": "Test\r\nTest     Test\r\n    Test",
+    "create_at": "2020-08-01T12:19:54.253Z",
+    "update_at": "2020-08-01T12:19:54.253Z",
+    "status": "active"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$150000$OX3cP4C2O4Rh$125Xhw78Rja74P6E1xb+IkcILvEqhJrJ/KNDqDnn+nU=",
+    "last_login": "2020-08-01T06:02:03.583Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2020-08-01T06:00:58.323Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

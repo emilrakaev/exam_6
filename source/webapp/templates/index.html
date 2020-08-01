@@ -6,24 +6,21 @@
             crossorigin="anonymous"></script>
 {% endblock %}
 {% block content %}
-    <form action="{% url 'guest_search' %}" method="get">
+    <form action="{% url 'guest_search' %}" method="get" class="search-form">
         <input type="search" placeholder="Введите имя" name="searching">
         <button type="submit">Search</button>
     </form>
     <h1>Guests:</h1>
     {% for guest in guests %}
-        <div class = "guest">
-        <div class="text-block">
-            <h3>{{ guest.name }} ({{ guest.email }})</h3>
-            <p>{{ guest.text }} </p>
-        </div>
+        <div class="guest">
+            <div class="text-block">
+                <h3>{{ guest.name }} ({{ guest.email }})</h3>
+                <pre>{{ guest.text }}</pre>
+            </div>
             <div class="icons">
                 <a href="{% url 'guest_update' guest.pk %}"><i class="fas fa-user-edit"></i></a>
                 <a href="{% url 'guest_delete' guest.pk %}"><i class="fas fa-user-minus"></i></a>
             </div>
         </div>
     {% endfor %}
-
-    {% url "guest_create" as action_url %}
-    {% include 'partial/form.html' with action_url=action_url form_method='post' %}
 {% endblock %}
