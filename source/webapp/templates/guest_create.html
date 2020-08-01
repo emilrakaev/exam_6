@@ -2,6 +2,6 @@
 {% block title %}Add guest{% endblock %}
 {% block content %}
     <h1>Add Guest</h1>
-    {% url "product_create" as action_url %}
+    {% url "guest_create" as action_url %}
     {% include 'partial/form.html' with action_url=action_url form_method='post' %}
 {% endblock %}

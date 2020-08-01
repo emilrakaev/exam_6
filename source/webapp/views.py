@@ -5,7 +5,7 @@ from webapp.forms import GuestForm
 
 
 def index_view(request):
-    data = Guest.objects.all()
+    data = Guest.objects.all().filter(status='active')
     return render(request, 'index.html', context={
         'guests': data
     })
@@ -69,3 +69,12 @@ def guest_delete_view(request, pk):
         return redirect('index')
     else:
         return HttpResponseNotAllowed(permitted_methods=['GET', 'POST'])
+
+
+def guest_search_view(request):
+    query=request.GET.get("searching")
+    data = Guest.objects.filter(name__icontains=query)
+    return render(request, 'guest_search.html', context={
+        'guests': data
+    })
+
